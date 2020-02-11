@@ -11,11 +11,8 @@ from signup_system import routes as signup
 def get_app():
     # Initialize
     app = Flask(__name__)
-    app.config.from_object('config.Config')
-    db = SQLAlchemy(app)
-    migrate = Migrate(app, db)
+    
     # Register blueprints
-    app.register_blueprint(usa_applicant.app)
     app.register_blueprint(signup.app)
     return app
 
