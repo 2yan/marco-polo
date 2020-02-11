@@ -1,12 +1,8 @@
 # Functional imports
 from flask import Flask
 from config import Config
-from flask_sqlalchemy import SQLAlchemy
-from flask_migrate import Migrate
 
 # Blueprint imports
-from usa_applicant_system import routes as usa_applicant
-from signup_system import routes as signup
 
 def get_app():
     # Initialize
