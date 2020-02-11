@@ -18,6 +18,12 @@ def index():
     return f.render_template("home.html")
 
 
+def get_questions():
+    questions = {"Question": ['A', 'B'],
+                "Question2": ['C', 'D']
+            }
+
+
 
 if __name__ == '__main__':
     app.run(host ='0.0.0.0', port =5000, debug = True)
