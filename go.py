@@ -1,6 +1,6 @@
 # Functional imports
 from flask import Flask
-from config import Config
+import flask as f
 
 # Blueprint imports
 
@@ -9,14 +9,13 @@ def get_app():
     app = Flask(__name__)
     
     # Register blueprints
-    app.register_blueprint(signup.app)
     return app
 
 app = get_app()
 
 @app.route('/')
 def index():
-    return "Hello world!"
+    return f.render_template("home.html")
 
 
 
